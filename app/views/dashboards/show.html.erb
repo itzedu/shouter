@@ -1,0 +1,11 @@
+<%= form_for @text_shout, url: text_shouts_path do |form| %>
+  <%= form.text_field :body, placeholder: 'Shout content here' %>
+  <%= form.submit 'Shout!' %>
+<% end %>
+
+<%= form_for @photo_shout, url: photo_shouts_path do |form| %>
+  <%= form.file_field :image %>
+  <%= form.submit 'Shout!' %>
+<% end %>
+
+<%= render @shouts %>
